@@ -3,285 +3,1013 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="2025 국민건강보험공단-경찰청 합동 워크숍 안내 - 포레스트리솜">
     <title>2025 국민건강보험공단-경찰청 합동 워크숍 안내</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        /* ========================================
+           Global Styles & Reset
+           ======================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         :root {
-            --primary-navy: #1a3a5c; --secondary-navy: #2c5282; --accent-gold: #f59e0b;
-            --danger-red: #dc2626; --success-green: #10b981; --light-gray: #f3f4f6;
-            --medium-gray: #e5e7eb; --white: #ffffff; --text-primary: #111827;
-            --text-secondary: #4b5563; --spacing-xs: 0.25rem; --spacing-sm: 0.5rem;
-            --spacing-md: 1rem; --spacing-lg: 1.5rem; --spacing-xl: 2rem;
-            --spacing-2xl: 3rem; --radius-md: 0.5rem; --radius-lg: 0.75rem;
-            --radius-xl: 1rem; --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            /* Color Palette */
+            --primary-navy: #1a3a5c;
+            --secondary-navy: #2c5282;
+            --accent-gold: #f59e0b;
+            --accent-yellow: #fbbf24;
+            --danger-red: #dc2626;
+            --success-green: #10b981;
+            --light-gray: #f3f4f6;
+            --medium-gray: #e5e7eb;
+            --dark-gray: #6b7280;
+            --white: #ffffff;
+            --text-primary: #111827;
+            --text-secondary: #4b5563;
+            
+            /* Spacing */
+            --spacing-xs: 0.25rem;
+            --spacing-sm: 0.5rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 1.5rem;
+            --spacing-xl: 2rem;
+            --spacing-2xl: 3rem;
+            
+            /* Border Radius */
+            --radius-sm: 0.375rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+            --radius-xl: 1rem;
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
             --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
             --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
         }
+
         body {
             font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            font-size: 16px; line-height: 1.6; color: var(--text-primary);
-            background-color: var(--light-gray); -webkit-font-smoothing: antialiased;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--light-gray);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
-        .container { max-width: 100%; margin: 0 auto; padding: 0 var(--spacing-lg); }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
+        }
+
+        /* ========================================
+           Header Section
+           ======================================== */
         .header {
             background: linear-gradient(135deg, var(--primary-navy) 0%, var(--secondary-navy) 100%);
-            color: var(--white); padding: var(--spacing-2xl) 0 var(--spacing-xl);
-            text-align: center; box-shadow: var(--shadow-lg);
+            color: var(--white);
+            padding: var(--spacing-2xl) 0 var(--spacing-xl);
+            text-align: center;
+            box-shadow: var(--shadow-lg);
         }
+
         .header-badge {
-            display: inline-block; background-color: var(--accent-gold); color: var(--white);
-            padding: var(--spacing-sm) var(--spacing-lg); border-radius: 50px;
-            font-size: 0.875rem; font-weight: 600; margin-bottom: var(--spacing-lg);
+            display: inline-block;
+            background-color: var(--accent-gold);
+            color: var(--white);
+            padding: var(--spacing-sm) var(--spacing-lg);
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-lg);
+            letter-spacing: 0.5px;
         }
-        .header-title { font-size: 1.75rem; font-weight: 800; line-height: 1.3; margin-bottom: var(--spacing-lg); }
-        .header-info { display: flex; justify-content: center; gap: var(--spacing-lg); flex-wrap: wrap; }
-        .info-item { display: flex; align-items: center; gap: var(--spacing-sm); font-size: 0.9375rem; }
+
+        .header-title {
+            font-size: 1.75rem;
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: var(--spacing-lg);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-info {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-lg);
+            flex-wrap: wrap;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-size: 0.9375rem;
+            opacity: 0.95;
+        }
+
+        .info-item i {
+            font-size: 1.125rem;
+        }
+
+        /* ========================================
+           Navigation Menu
+           ======================================== */
         .nav-menu {
-            background-color: var(--white); box-shadow: var(--shadow-md);
-            position: sticky; top: 0; z-index: 100; transition: transform 0.3s ease;
+            background-color: var(--white);
+            box-shadow: var(--shadow-md);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
-        .nav-container { display: flex; justify-content: space-around; }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-around;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
         .nav-link {
-            flex: 1; text-align: center; padding: var(--spacing-md);
-            color: var(--primary-navy); text-decoration: none; font-weight: 600;
-            font-size: 0.9375rem; transition: all 0.3s ease; border-bottom: 3px solid transparent;
+            flex: 1;
+            text-align: center;
+            padding: var(--spacing-md);
+            color: var(--primary-navy);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
         }
-        .nav-link:hover { background-color: var(--light-gray); border-bottom-color: var(--accent-gold); }
-        .section { padding: var(--spacing-2xl) 0; background-color: var(--white); }
-        .section-alt { background-color: var(--light-gray); }
-        .section-header { text-align: center; margin-bottom: var(--spacing-2xl); }
+
+        .nav-link:hover,
+        .nav-link:active {
+            background-color: var(--light-gray);
+            border-bottom-color: var(--accent-gold);
+        }
+
+        /* ========================================
+           Section Styles
+           ======================================== */
+        .section {
+            padding: var(--spacing-2xl) 0;
+            background-color: var(--white);
+        }
+
+        .section-alt {
+            background-color: var(--light-gray);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--spacing-2xl);
+        }
+
         .section-title {
-            font-size: 1.5rem; font-weight: 800; color: var(--primary-navy);
-            margin-bottom: var(--spacing-sm); display: flex; align-items: center;
-            justify-content: center; gap: var(--spacing-sm);
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-navy);
+            margin-bottom: var(--spacing-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-sm);
         }
-        .section-date { font-size: 1rem; color: var(--text-secondary); font-weight: 500; }
-        .timeline-item { display: flex; gap: var(--spacing-lg); margin-bottom: var(--spacing-2xl); position: relative; }
+
+        .section-title i {
+            font-size: 1.375rem;
+        }
+
+        .section-date {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        /* ========================================
+           Timeline Styles
+           ======================================== */
+        .timeline-item {
+            display: flex;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-2xl);
+            position: relative;
+        }
+
         .timeline-item:not(:last-child)::after {
-            content: ''; position: absolute; left: 1.875rem; top: 4rem; width: 2px;
-            height: calc(100% - 2rem); background: linear-gradient(to bottom, var(--medium-gray) 0%, transparent 100%);
+            content: '';
+            position: absolute;
+            left: 1.875rem;
+            top: 4rem;
+            width: 2px;
+            height: calc(100% - 2rem);
+            background: linear-gradient(to bottom, var(--medium-gray) 0%, transparent 100%);
         }
+
         .timeline-icon {
-            width: 3.75rem; height: 3.75rem; border-radius: 50%; display: flex;
-            align-items: center; justify-content: center; font-size: 1.5rem;
-            color: var(--white); flex-shrink: 0; box-shadow: var(--shadow-md);
+            width: 3.75rem;
+            height: 3.75rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--white);
+            flex-shrink: 0;
+            box-shadow: var(--shadow-md);
         }
-        .timeline-icon.parking { background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); }
-        .timeline-icon.seminar { background: linear-gradient(135deg, #10b981 0%, #059669 100%); }
-        .timeline-icon.options { background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); }
-        .timeline-icon.dinner, .timeline-icon.lunch { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); }
-        .timeline-icon.breakfast { background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); }
-        .timeline-icon.transfer { background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); }
-        .timeline-content { flex: 1; }
+
+        .timeline-icon.parking {
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+        }
+
+        .timeline-icon.seminar {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+
+        .timeline-icon.options {
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+        }
+
+        .timeline-icon.dinner,
+        .timeline-icon.lunch {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        }
+
+        .timeline-icon.breakfast {
+            background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+        }
+
+        .timeline-icon.transfer {
+            background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+        }
+
+        .timeline-content {
+            flex: 1;
+        }
+
         .timeline-title {
-            font-size: 1.25rem; font-weight: 700; color: var(--primary-navy);
-            margin-bottom: var(--spacing-md); display: flex; align-items: center;
-            gap: var(--spacing-md); flex-wrap: wrap;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            margin-bottom: var(--spacing-md);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
         }
+
         .step-number {
-            display: inline-block; background-color: var(--accent-gold); color: var(--white);
-            padding: var(--spacing-xs) var(--spacing-md); border-radius: var(--radius-md);
-            font-size: 0.75rem; font-weight: 700;
+            display: inline-block;
+            background-color: var(--accent-gold);
+            color: var(--white);
+            padding: var(--spacing-xs) var(--spacing-md);
+            border-radius: var(--radius-md);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
         }
+
+        /* ========================================
+           Info Box Styles
+           ======================================== */
         .info-box {
-            background-color: var(--light-gray); border-left: 4px solid var(--primary-navy);
-            padding: var(--spacing-lg); border-radius: var(--radius-md);
-        }
-        .info-box.highlight { background-color: #eff6ff; border-left-color: var(--success-green); }
-        .info-box.highlight-gold { background-color: #fffbeb; border-left-color: var(--accent-gold); }
-        .info-main {
-            font-size: 1.0625rem; font-weight: 600; color: var(--text-primary);
-            margin-bottom: var(--spacing-md); display: flex; align-items: center; gap: var(--spacing-sm);
-        }
-        .info-list { list-style: none; margin-top: var(--spacing-md); }
-        .info-list li {
-            padding: var(--spacing-sm) 0; display: flex; align-items: start;
-            gap: var(--spacing-sm); color: var(--text-secondary);
-        }
-        .info-list i { color: var(--accent-gold); margin-top: 0.25rem; }
-        .warning-box {
-            background-color: #fef2f2; border: 2px solid var(--danger-red);
-            border-radius: var(--radius-md); padding: var(--spacing-lg); margin-top: var(--spacing-lg);
-        }
-        .warning-box strong {
-            color: var(--danger-red); font-size: 1.0625rem;
-            display: block; margin-bottom: var(--spacing-sm);
-        }
-        .warning-box p { color: var(--text-secondary); margin: var(--spacing-sm) 0; line-height: 1.6; }
-        .pdf-link {
-            display: flex; align-items: center; justify-content: center; gap: var(--spacing-sm);
-            margin-top: var(--spacing-lg); padding: var(--spacing-md) var(--spacing-xl);
-            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
-            color: var(--white); text-decoration: none; border-radius: var(--radius-md);
-            font-weight: 600; font-size: 1rem; transition: all 0.3s ease; box-shadow: var(--shadow-md);
-        }
-        .pdf-link:hover {
-            transform: translateY(-2px); box-shadow: var(--shadow-lg);
-            background: linear-gradient(135deg, #b91c1c 0%, #991b1b 100%);
-        }
-        .pdf-link i:first-child { font-size: 1.25rem; }
-        .pdf-link i:last-child { font-size: 0.875rem; }
-        .options-container { display: flex; flex-direction: column; gap: var(--spacing-md); }
-        .option-card {
-            background-color: var(--white); border-radius: var(--radius-lg);
-            padding: var(--spacing-lg); box-shadow: var(--shadow-md);
-        }
-        .option-header {
-            display: flex; align-items: center; gap: var(--spacing-sm);
-            margin-bottom: var(--spacing-md); font-size: 1.0625rem;
-            padding-bottom: var(--spacing-md); border-bottom: 2px solid var(--medium-gray);
-        }
-        .option-header.option-a { color: #10b981; }
-        .option-header.option-b { color: #f59e0b; }
-        .option-list { list-style: none; counter-reset: option-counter; }
-        .option-list li {
-            counter-increment: option-counter; padding: var(--spacing-sm) 0 var(--spacing-sm) var(--spacing-xl);
-            position: relative; color: var(--text-secondary);
-        }
-        .option-list li::before {
-            content: counter(option-counter); position: absolute; left: 0; top: var(--spacing-sm);
-            background-color: var(--success-green); color: var(--white); width: 1.5rem; height: 1.5rem;
-            border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            font-size: 0.75rem; font-weight: 700;
-        }
-        .option-direct {
-            font-size: 1.0625rem; font-weight: 600; color: var(--primary-navy);
-            text-align: center; padding: var(--spacing-md); background-color: var(--light-gray);
+            background-color: var(--light-gray);
+            border-left: 4px solid var(--primary-navy);
+            padding: var(--spacing-lg);
             border-radius: var(--radius-md);
         }
-        .option-divider { text-align: center; font-weight: 600; color: var(--text-secondary); padding: var(--spacing-sm) 0; }
-        .time-location { display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-lg); }
-        .time-box, .location-box { display: flex; align-items: center; gap: var(--spacing-md); }
-        .time-box i, .location-box i { font-size: 2rem; color: var(--accent-gold); }
-        .time-label, .location-label { font-size: 0.875rem; color: var(--text-secondary); }
-        .time-value, .location-value { font-size: 1.125rem; font-weight: 700; color: var(--primary-navy); }
-        .location-sub { font-size: 0.875rem; font-weight: 500; color: var(--text-secondary); }
+
+        .info-box.highlight {
+            background-color: #eff6ff;
+            border-left-color: var(--success-green);
+        }
+
+        .info-box.highlight-gold {
+            background-color: #fffbeb;
+            border-left-color: var(--accent-gold);
+        }
+
+        .info-main {
+            font-size: 1.0625rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-md);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .info-main i {
+            color: var(--primary-navy);
+            font-size: 1.125rem;
+        }
+
+        .info-list {
+            list-style: none;
+            margin-top: var(--spacing-md);
+        }
+
+        .info-list li {
+            padding: var(--spacing-sm) 0;
+            display: flex;
+            align-items: start;
+            gap: var(--spacing-sm);
+            color: var(--text-secondary);
+        }
+
+        .info-list i {
+            color: var(--accent-gold);
+            margin-top: 0.25rem;
+            flex-shrink: 0;
+        }
+
+        /* ========================================
+           Warning Box
+           ======================================== */
+        .warning-box {
+            background-color: #fef2f2;
+            border: 2px solid var(--danger-red);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+        }
+
+        .warning-box i {
+            color: var(--danger-red);
+            font-size: 1.25rem;
+            margin-right: var(--spacing-sm);
+        }
+
+        .warning-box strong {
+            color: var(--danger-red);
+            font-size: 1.0625rem;
+            display: block;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .warning-box p {
+            color: var(--text-secondary);
+            margin: var(--spacing-sm) 0;
+            line-height: 1.6;
+        }
+
+        /* ========================================
+           PDF Link Button
+           ======================================== */
+        .pdf-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-sm);
+            margin-top: var(--spacing-lg);
+            padding: var(--spacing-md) var(--spacing-xl);
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+        }
+
+        .pdf-link:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            background: linear-gradient(135deg, #b91c1c 0%, #991b1b 100%);
+        }
+
+        .pdf-link i:first-child {
+            font-size: 1.25rem;
+        }
+
+        .pdf-link i:last-child {
+            font-size: 0.875rem;
+        }
+
+        /* ========================================
+           Options Container
+           ======================================== */
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+
+        .option-card {
+            background-color: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow-md);
+        }
+
+        .option-header {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-md);
+            font-size: 1.0625rem;
+            padding-bottom: var(--spacing-md);
+            border-bottom: 2px solid var(--medium-gray);
+        }
+
+        .option-header.option-a {
+            color: #10b981;
+        }
+
+        .option-header.option-b {
+            color: #f59e0b;
+        }
+
+        .option-header i {
+            font-size: 1.25rem;
+        }
+
+        .option-list {
+            list-style: none;
+            counter-reset: option-counter;
+        }
+
+        .option-list li {
+            counter-increment: option-counter;
+            padding: var(--spacing-sm) 0 var(--spacing-sm) var(--spacing-xl);
+            position: relative;
+            color: var(--text-secondary);
+        }
+
+        .option-list li::before {
+            content: counter(option-counter);
+            position: absolute;
+            left: 0;
+            top: var(--spacing-sm);
+            background-color: var(--success-green);
+            color: var(--white);
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .option-direct {
+            font-size: 1.0625rem;
+            font-weight: 600;
+            color: var(--primary-navy);
+            text-align: center;
+            padding: var(--spacing-md);
+            background-color: var(--light-gray);
+            border-radius: var(--radius-md);
+        }
+
+        .option-divider {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-secondary);
+            padding: var(--spacing-sm) 0;
+        }
+
+        /* ========================================
+           Time & Location Display
+           ======================================== */
+        .time-location {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+        }
+
+        .time-box,
+        .location-box {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+        }
+
+        .time-box i,
+        .location-box i {
+            font-size: 2rem;
+            color: var(--accent-gold);
+            flex-shrink: 0;
+        }
+
+        .time-label,
+        .location-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .time-value,
+        .location-value {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+        }
+
+        .location-sub {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        /* ========================================
+           Alert Box (Day 2)
+           ======================================== */
         .alert-box {
             background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
-            border: 3px solid var(--danger-red); border-radius: var(--radius-xl);
-            padding: var(--spacing-xl); margin-bottom: var(--spacing-2xl);
-            display: flex; gap: var(--spacing-lg); box-shadow: var(--shadow-lg);
+            border: 3px solid var(--danger-red);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-2xl);
+            display: flex;
+            gap: var(--spacing-lg);
+            box-shadow: var(--shadow-lg);
         }
-        .alert-icon i { font-size: 3rem; color: var(--danger-red); }
-        .alert-title { font-size: 1.375rem; font-weight: 800; color: var(--danger-red); margin-bottom: var(--spacing-xs); }
-        .alert-subtitle { font-size: 1rem; color: var(--text-secondary); margin-bottom: var(--spacing-lg); }
-        .alert-list { list-style: none; }
+
+        .alert-icon {
+            flex-shrink: 0;
+        }
+
+        .alert-icon i {
+            font-size: 3rem;
+            color: var(--danger-red);
+        }
+
+        .alert-content {
+            flex: 1;
+        }
+
+        .alert-title {
+            font-size: 1.375rem;
+            font-weight: 800;
+            color: var(--danger-red);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .alert-subtitle {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .alert-list {
+            list-style: none;
+        }
+
         .alert-list li {
-            display: flex; align-items: center; gap: var(--spacing-sm);
-            padding: var(--spacing-sm) 0; font-size: 1.0625rem; font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            padding: var(--spacing-sm) 0;
+            font-size: 1.0625rem;
+            font-weight: 600;
+            color: var(--text-primary);
         }
-        .alert-list i { color: var(--success-green); font-size: 1.25rem; }
-        .contact-grid { display: grid; gap: var(--spacing-lg); }
+
+        .alert-list i {
+            color: var(--success-green);
+            font-size: 1.25rem;
+        }
+
+        /* ========================================
+           Contact Section
+           ======================================== */
+        .contact-grid {
+            display: grid;
+            gap: var(--spacing-lg);
+        }
+
         .contact-card {
-            display: flex; align-items: center; gap: var(--spacing-lg);
-            background-color: var(--white); border-radius: var(--radius-lg);
-            padding: var(--spacing-xl); box-shadow: var(--shadow-md);
-            text-decoration: none; transition: all 0.3s ease; border: 2px solid transparent;
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-lg);
+            background-color: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            box-shadow: var(--shadow-md);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
         }
-        .contact-card:hover { box-shadow: var(--shadow-xl); border-color: var(--accent-gold); transform: translateY(-2px); }
+
+        .contact-card:hover,
+        .contact-card:active {
+            box-shadow: var(--shadow-xl);
+            border-color: var(--accent-gold);
+            transform: translateY(-2px);
+        }
+
         .contact-icon {
-            width: 3.75rem; height: 3.75rem; border-radius: 50%;
+            width: 3.75rem;
+            height: 3.75rem;
+            border-radius: 50%;
             background: linear-gradient(135deg, var(--primary-navy) 0%, var(--secondary-navy) 100%);
-            display: flex; align-items: center; justify-content: center;
-            color: var(--white); font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            flex-shrink: 0;
         }
-        .contact-name { font-size: 1.125rem; font-weight: 700; color: var(--primary-navy); }
-        .contact-number { font-size: 1.25rem; font-weight: 600; color: var(--accent-gold); }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-name {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .contact-number {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--accent-gold);
+            font-family: 'Roboto', sans-serif;
+        }
+
         .contact-action {
-            width: 2.5rem; height: 2.5rem; border-radius: 50%;
-            background-color: var(--accent-gold); display: flex;
-            align-items: center; justify-content: center; color: var(--white); font-size: 1.125rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background-color: var(--accent-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.125rem;
+            flex-shrink: 0;
         }
+
+        /* ========================================
+           Facility Info Section
+           ======================================== */
         .facility-card {
-            background-color: var(--white); border-radius: var(--radius-xl);
-            overflow: hidden; box-shadow: var(--shadow-lg);
+            background-color: var(--white);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
         }
+
         .facility-item {
-            display: flex; align-items: center; gap: var(--spacing-lg);
-            padding: var(--spacing-xl); border-bottom: 1px solid var(--medium-gray);
-            text-decoration: none; transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-lg);
+            padding: var(--spacing-xl);
+            border-bottom: 1px solid var(--medium-gray);
+            text-decoration: none;
+            transition: background-color 0.3s ease;
         }
-        .facility-item:last-child { border-bottom: none; }
-        .facility-item.clickable:hover { background-color: var(--light-gray); }
+
+        .facility-item:last-child {
+            border-bottom: none;
+        }
+
+        .facility-item.clickable:hover,
+        .facility-item.clickable:active {
+            background-color: var(--light-gray);
+        }
+
         .facility-icon {
-            width: 3.75rem; height: 3.75rem; border-radius: var(--radius-lg);
+            width: 3.75rem;
+            height: 3.75rem;
+            border-radius: var(--radius-lg);
             background: linear-gradient(135deg, var(--primary-navy) 0%, var(--secondary-navy) 100%);
-            display: flex; align-items: center; justify-content: center;
-            color: var(--white); font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            flex-shrink: 0;
         }
-        .facility-content { flex: 1; }
-        .facility-label { font-size: 0.875rem; color: var(--text-secondary); }
-        .facility-value { font-size: 1.0625rem; font-weight: 600; color: var(--primary-navy); }
+
+        .facility-content {
+            flex: 1;
+        }
+
+        .facility-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .facility-value {
+            font-size: 1.0625rem;
+            font-weight: 600;
+            color: var(--primary-navy);
+        }
+
         .facility-action {
-            width: 2.5rem; height: 2.5rem; border-radius: 50%;
-            background-color: var(--accent-gold); display: flex;
-            align-items: center; justify-content: center; color: var(--white);
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background-color: var(--accent-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1rem;
+            flex-shrink: 0;
         }
-        .quick-reference { background: linear-gradient(135deg, var(--primary-navy) 0%, var(--secondary-navy) 100%); }
-        .quick-reference .section-title { color: var(--white); }
-        .quick-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacing-lg); }
+
+        /* ========================================
+           Quick Reference Section
+           ======================================== */
+        .quick-reference {
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--secondary-navy) 100%);
+        }
+
+        .quick-reference .section-title {
+            color: var(--white);
+        }
+
+        .quick-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-lg);
+        }
+
         .quick-item {
-            background-color: var(--white); border-radius: var(--radius-xl);
-            padding: var(--spacing-xl); text-align: center;
-            box-shadow: var(--shadow-lg); transition: transform 0.3s ease;
+            background-color: var(--white);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-xl);
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            transition: transform 0.3s ease;
         }
-        .quick-item:hover { transform: translateY(-4px); }
+
+        .quick-item:hover {
+            transform: translateY(-4px);
+        }
+
         .quick-icon {
-            width: 4.5rem; height: 4.5rem; border-radius: 50%; display: flex;
-            align-items: center; justify-content: center; margin: 0 auto var(--spacing-md);
-            color: var(--white); font-size: 2rem;
+            width: 4.5rem;
+            height: 4.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--spacing-md);
+            color: var(--white);
+            font-size: 2rem;
         }
-        .quick-icon.seminar-bg { background: linear-gradient(135deg, #10b981 0%, #059669 100%); }
-        .quick-icon.dinner-bg { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); }
-        .quick-icon.breakfast-bg { background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); }
-        .quick-icon.parking-bg { background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); }
-        .quick-title { font-size: 1.0625rem; font-weight: 700; color: var(--primary-navy); margin-bottom: var(--spacing-sm); }
-        .quick-location { font-size: 0.9375rem; font-weight: 500; color: var(--text-secondary); }
-        .footer { background-color: var(--primary-navy); color: var(--white); padding: var(--spacing-xl) 0; text-align: center; }
-        .footer-text { font-size: 0.9375rem; margin-bottom: var(--spacing-md); opacity: 0.9; }
-        .footer-copyright { font-size: 0.875rem; opacity: 0.7; }
+
+        .quick-icon.seminar-bg {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+
+        .quick-icon.dinner-bg {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        }
+
+        .quick-icon.breakfast-bg {
+            background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+        }
+
+        .quick-icon.parking-bg {
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+        }
+
+        .quick-title {
+            font-size: 1.0625rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            margin-bottom: var(--spacing-sm);
+            line-height: 1.4;
+        }
+
+        .quick-location {
+            font-size: 0.9375rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        /* ========================================
+           Footer
+           ======================================== */
+        .footer {
+            background-color: var(--primary-navy);
+            color: var(--white);
+            padding: var(--spacing-xl) 0;
+            text-align: center;
+        }
+
+        .footer-text {
+            font-size: 0.9375rem;
+            margin-bottom: var(--spacing-md);
+            opacity: 0.9;
+        }
+
+        .footer-text i {
+            margin-right: var(--spacing-sm);
+        }
+
+        .footer-copyright {
+            font-size: 0.875rem;
+            opacity: 0.7;
+        }
+
+        /* ========================================
+           Scroll to Top Button
+           ======================================== */
         .scroll-top-btn {
-            position: fixed; bottom: 2rem; right: 2rem; width: 3.5rem; height: 3.5rem;
-            border-radius: 50%; background: linear-gradient(135deg, var(--accent-gold) 0%, #d97706 100%);
-            color: var(--white); border: none; font-size: 1.25rem; cursor: pointer;
-            box-shadow: var(--shadow-xl); opacity: 0; visibility: hidden;
-            transition: all 0.3s ease; z-index: 1000;
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-gold) 0%, #d97706 100%);
+            color: var(--white);
+            border: none;
+            font-size: 1.25rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-xl);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
         }
-        .scroll-top-btn.visible { opacity: 1; visibility: visible; }
-        .scroll-top-btn:hover { transform: translateY(-4px); }
+
+        .scroll-top-btn.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 25px 35px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        .scroll-top-btn:active {
+            transform: translateY(-2px);
+        }
+
+        /* ========================================
+           Responsive Design
+           ======================================== */
+
+        /* Tablets (768px and above) */
         @media (min-width: 768px) {
-            .container { max-width: 768px; padding: 0 var(--spacing-xl); }
-            .header-title { font-size: 2.25rem; }
-            .section-title { font-size: 1.875rem; }
-            .contact-grid { grid-template-columns: repeat(2, 1fr); }
-            .quick-grid { grid-template-columns: repeat(4, 1fr); }
+            .container {
+                max-width: 768px;
+                padding: 0 var(--spacing-xl);
+            }
+            
+            .header-title {
+                font-size: 2.25rem;
+            }
+            
+            .section-title {
+                font-size: 1.875rem;
+            }
+            
+            .timeline-title {
+                font-size: 1.5rem;
+            }
+            
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .quick-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
         }
+
+        /* Desktop (1024px and above) */
         @media (min-width: 1024px) {
-            .container { max-width: 900px; }
-            .options-container { flex-direction: row; }
-            .option-card { flex: 1; }
+            .container {
+                max-width: 900px;
+            }
+            
+            .options-container {
+                flex-direction: row;
+                align-items: stretch;
+            }
+            
+            .option-card {
+                flex: 1;
+            }
+            
+            .option-divider {
+                display: flex;
+                align-items: center;
+                padding: 0 var(--spacing-md);
+            }
         }
+
+        /* Mobile optimization */
         @media (max-width: 767px) {
-            .time-location { grid-template-columns: 1fr; }
-            .alert-box { flex-direction: column; text-align: center; }
-            .quick-item { padding: var(--spacing-lg); }
-            .quick-icon { width: 3.5rem; height: 3.5rem; font-size: 1.5rem; }
+            .time-location {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-md);
+            }
+            
+            .alert-box {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .alert-icon {
+                margin: 0 auto;
+            }
+            
+            .quick-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--spacing-md);
+            }
+            
+            .quick-item {
+                padding: var(--spacing-lg);
+            }
+            
+            .quick-icon {
+                width: 3.5rem;
+                height: 3.5rem;
+                font-size: 1.5rem;
+            }
+            
+            .quick-title {
+                font-size: 0.9375rem;
+            }
+            
+            .quick-location {
+                font-size: 0.875rem;
+            }
+        }
+
+        /* Very small screens */
+        @media (max-width: 374px) {
+            .header-title {
+                font-size: 1.5rem;
+            }
+            
+            .nav-link {
+                font-size: 0.875rem;
+                padding: var(--spacing-sm);
+            }
+            
+            .timeline-icon {
+                width: 3rem;
+                height: 3rem;
+                font-size: 1.25rem;
+            }
+            
+            .contact-card,
+            .facility-item {
+                padding: var(--spacing-lg);
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .nav-menu,
+            .scroll-top-btn {
+                display: none;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header-badge">공식 워크숍 안내</div>
             <h1 class="header-title">2025 국민건강보험공단-경찰청<br>합동 워크숍</h1>
             <div class="header-info">
-                <div class="info-item"><i class="fas fa-map-marker-alt"></i><span>포레스트리솜</span></div>
-                <div class="info-item"><i class="fas fa-calendar-alt"></i><span>2025.11.20(목) ~ 11.21(금)</span></div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>포레스트리솜</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>2025.11.20(목) ~ 11.21(금)</span>
+                </div>
             </div>
         </div>
     </header>
+
+    <!-- Navigation -->
     <nav class="nav-menu">
         <div class="nav-container">
             <a href="#day1" class="nav-link">1일차</a>
@@ -290,18 +1018,33 @@
             <a href="#facility" class="nav-link">시설정보</a>
         </div>
     </nav>
+
+    <!-- Day 1 Section -->
     <section id="day1" class="section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title"><i class="fas fa-calendar-day"></i>1일차 일정</h2>
+                <h2 class="section-title">
+                    <i class="fas fa-calendar-day"></i>
+                    1일차 일정
+                </h2>
                 <div class="section-date">2025년 11월 20일 (목요일)</div>
             </div>
+
+            <!-- Step 1: Parking -->
             <div class="timeline-item">
-                <div class="timeline-icon parking"><i class="fas fa-car"></i></div>
+                <div class="timeline-icon parking">
+                    <i class="fas fa-car"></i>
+                </div>
                 <div class="timeline-content">
-                    <h3 class="timeline-title"><span class="step-number">STEP 1</span>차량 주차</h3>
+                    <h3 class="timeline-title">
+                        <span class="step-number">STEP 1</span>
+                        차량 주차
+                    </h3>
                     <div class="info-box">
-                        <p class="info-main"><i class="fas fa-parking"></i><strong>포레스트 클럽 지하주차장</strong> 이용</p>
+                        <p class="info-main">
+                            <i class="fas fa-parking"></i>
+                            <strong>포레스트 클럽 지하주차장</strong> 이용
+                        </p>
                         <ul class="info-list">
                             <li><i class="fas fa-chevron-right"></i> 차량 진입 시 자동으로 <strong>B6층</strong> 도착</li>
                             <li><i class="fas fa-chevron-right"></i> 주차 가능층: <strong>B6 ~ B4층</strong></li>
@@ -309,12 +1052,22 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Step 2: Seminar Room -->
             <div class="timeline-item">
-                <div class="timeline-icon seminar"><i class="fas fa-building"></i></div>
+                <div class="timeline-icon seminar">
+                    <i class="fas fa-building"></i>
+                </div>
                 <div class="timeline-content">
-                    <h3 class="timeline-title"><span class="step-number">STEP 2</span>세미나실 이동</h3>
+                    <h3 class="timeline-title">
+                        <span class="step-number">STEP 2</span>
+                        세미나실 이동
+                    </h3>
                     <div class="info-box highlight">
-                        <p class="info-main"><i class="fas fa-map-pin"></i><strong>목적지: 포레스트 리솜 3층(3F) 스튜디오C</strong></p>
+                        <p class="info-main">
+                            <i class="fas fa-map-pin"></i>
+                            <strong>목적지: 포레스트 리솜 3층(3F) 스튜디오C</strong>
+                        </p>
                         <div class="warning-box">
                             <i class="fas fa-exclamation-triangle"></i>
                             <strong>중요 안내</strong>
@@ -329,13 +1082,23 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Step 3: Options After Seminar -->
             <div class="timeline-item">
-                <div class="timeline-icon options"><i class="fas fa-route"></i></div>
+                <div class="timeline-icon options">
+                    <i class="fas fa-route"></i>
+                </div>
                 <div class="timeline-content">
-                    <h3 class="timeline-title"><span class="step-number">STEP 3</span>세미나 종료 후</h3>
+                    <h3 class="timeline-title">
+                        <span class="step-number">STEP 3</span>
+                        세미나 종료 후
+                    </h3>
                     <div class="options-container">
                         <div class="option-card">
-                            <div class="option-header option-a"><i class="fas fa-clock"></i><strong>시간 여유가 있는 경우</strong></div>
+                            <div class="option-header option-a">
+                                <i class="fas fa-clock"></i>
+                                <strong>시간 여유가 있는 경우</strong>
+                            </div>
                             <ol class="option-list">
                                 <li>3인1실 배정표 확인</li>
                                 <li>숙박동으로 이동하여 짐 정리</li>
@@ -344,37 +1107,68 @@
                         </div>
                         <div class="option-divider">또는</div>
                         <div class="option-card">
-                            <div class="option-header option-b"><i class="fas fa-fast-forward"></i><strong>시간이 촉박한 경우</strong></div>
+                            <div class="option-header option-b">
+                                <i class="fas fa-fast-forward"></i>
+                                <strong>시간이 촉박한 경우</strong>
+                            </div>
                             <p class="option-direct">방 배정표 확인, 개인 짐 보관 후 만찬장으로 직접 이동</p>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Step 4: Dinner -->
             <div class="timeline-item">
-                <div class="timeline-icon dinner"><i class="fas fa-utensils"></i></div>
+                <div class="timeline-icon dinner">
+                    <i class="fas fa-utensils"></i>
+                </div>
                 <div class="timeline-content">
-                    <h3 class="timeline-title"><span class="step-number">STEP 4</span>만찬</h3>
+                    <h3 class="timeline-title">
+                        <span class="step-number">STEP 4</span>
+                        만찬
+                    </h3>
                     <div class="info-box highlight-gold">
                         <div class="time-location">
-                            <div class="time-box"><i class="fas fa-clock"></i><div><div class="time-label">입장 시간</div><div class="time-value">18:30까지</div></div></div>
-                            <div class="location-box"><i class="fas fa-map-marker-alt"></i><div><div class="location-label">장소</div><div class="location-value">레스트리 리솜 B1층 몬도키친</div></div></div>
+                            <div class="time-box">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <div class="time-label">입장 시간</div>
+                                    <div class="time-value">18:30까지</div>
+                                </div>
+                            </div>
+                            <div class="location-box">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <div class="location-label">장소</div>
+                                    <div class="location-value">레스트리리솜 B1층 몬도키친</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Day 2 Section -->
     <section id="day2" class="section section-alt">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title"><i class="fas fa-calendar-day"></i>2일차 일정</h2>
+                <h2 class="section-title">
+                    <i class="fas fa-calendar-day"></i>
+                    2일차 일정
+                </h2>
                 <div class="section-date">2025년 11월 21일 (금요일)</div>
             </div>
+
+            <!-- Important Notice -->
             <div class="alert-box">
-                <div class="alert-icon"><i class="fas fa-exclamation-circle"></i></div>
+                <div class="alert-icon">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
                 <div class="alert-content">
                     <h4 class="alert-title">필수 안내사항</h4>
-                    <p class="alert-subtitle">아침식사 전 반드시 완료해주세요</p>
+                    <p class="alert-subtitle">아침식사 후 반드시 완료해주세요</p>
                     <ul class="alert-list">
                         <li><i class="fas fa-check-circle"></i> 객실 내 짐 모두 정리</li>
                         <li><i class="fas fa-check-circle"></i> 퇴실 완료</li>
@@ -382,120 +1176,439 @@
                     </ul>
                 </div>
             </div>
+
+            <!-- Breakfast -->
             <div class="timeline-item">
-                <div class="timeline-icon breakfast"><i class="fas fa-coffee"></i></div>
+                <div class="timeline-icon breakfast">
+                    <i class="fas fa-coffee"></i>
+                </div>
                 <div class="timeline-content">
-                    <h3 class="timeline-title"><span class="step-number">STEP 1</span>조식</h3>
+                    <h3 class="timeline-title">
+                        <span class="step-number">STEP 1</span>
+                        조식
+                    </h3>
                     <div class="info-box highlight-gold">
                         <div class="time-location">
-                            <div class="time-box"><i class="fas fa-clock"></i><div><div class="time-label">시간</div><div class="time-value">08:00 ~ 09:00</div></div></div>
-                            <div class="location-box"><i class="fas fa-map-marker-alt"></i><div><div class="location-label">장소</div><div class="location-value">포레스트 리솜 2층 선데이브리즈</div></div></div>
+                            <div class="time-box">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <div class="time-label">시간</div>
+                                    <div class="time-value">08:00 ~ 09:00</div>
+                                </div>
+                            </div>
+                            <div class="location-box">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <div class="location-label">장소</div>
+                                    <div class="location-value">포레스트 리솜 2층 선데이브리즈</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Transfer -->
             <div class="timeline-item">
-                <div class="timeline-icon transfer"><i class="fas fa-exchange-alt"></i></div>
+                <div class="timeline-icon transfer">
+                    <i class="fas fa-exchange-alt"></i>
+                </div>
                 <div class="timeline-content">
-                    <h3 class="timeline-title"><span class="step-number">STEP 2</span>조식 후 이동</h3>
-                    <div class="info-box"><p class="info-main"><i class="fas fa-arrow-right"></i><strong>포레스트 리솜 세미나동</strong>으로 이동</p></div>
+                    <h3 class="timeline-title">
+                        <span class="step-number">STEP 2</span>
+                        조식 후 이동
+                    </h3>
+                    <div class="info-box">
+                        <p class="info-main">
+                            <i class="fas fa-arrow-right"></i>
+                            <strong>포레스트 리솜 세미나동</strong>으로 이동
+                        </p>
+                    </div>
                 </div>
             </div>
+
+            <!-- Lunch -->
             <div class="timeline-item">
-                <div class="timeline-icon lunch"><i class="fas fa-utensils"></i></div>
+                <div class="timeline-icon lunch">
+                    <i class="fas fa-utensils"></i>
+                </div>
                 <div class="timeline-content">
-                    <h3 class="timeline-title"><span class="step-number">STEP 3</span>점심</h3>
+                    <h3 class="timeline-title">
+                        <span class="step-number">STEP 3</span>
+                        점심
+                    </h3>
                     <div class="info-box highlight-gold">
                         <div class="time-location">
-                            <div class="time-box"><i class="fas fa-clock"></i><div><div class="time-label">시간</div><div class="time-value">12:00 ~ 13:00</div></div></div>
-                            <div class="location-box"><i class="fas fa-map-marker-alt"></i><div><div class="location-label">장소</div><div class="location-value">레스트리 리솜 B1층 몬도키친</div></div></div>
+                            <div class="time-box">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <div class="time-label">시간</div>
+                                    <div class="time-value">12:00 ~ 13:00</div>
+                                </div>
+                            </div>
+                            <div class="location-box">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <div class="location-label">장소</div>
+                                    <div class="location-value">레스트리리솜 B1층 몬도키친</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Contact Section -->
     <section id="contact" class="section">
         <div class="container">
-            <div class="section-header"><h2 class="section-title"><i class="fas fa-phone-alt"></i>긴급연락처</h2></div>
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-phone-alt"></i>
+                    긴급연락처
+                </h2>
+            </div>
+
             <div class="contact-grid">
                 <a href="tel:010-3658-2360" class="contact-card">
-                    <div class="contact-icon"><i class="fas fa-user-tie"></i></div>
-                    <div class="contact-info"><div class="contact-name">김완수 팀장</div><div class="contact-number">010-3658-2360</div></div>
-                    <div class="contact-action"><i class="fas fa-phone"></i></div>
+                    <div class="contact-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-name">김완수 팀장</div>
+                        <div class="contact-number">010-3658-2360</div>
+                    </div>
+                    <div class="contact-action">
+                        <i class="fas fa-phone"></i>
+                    </div>
                 </a>
+
                 <a href="tel:010-7406-0488" class="contact-card">
-                    <div class="contact-icon"><i class="fas fa-user-tie"></i></div>
-                    <div class="contact-info"><div class="contact-name">연병만 과장</div><div class="contact-number">010-7406-0488</div></div>
-                    <div class="contact-action"><i class="fas fa-phone"></i></div>
+                    <div class="contact-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-name">연병만 과장</div>
+                        <div class="contact-number">010-7406-0488</div>
+                    </div>
+                    <div class="contact-action">
+                        <i class="fas fa-phone"></i>
+                    </div>
                 </a>
             </div>
         </div>
     </section>
+
+    <!-- Facility Info Section -->
     <section id="facility" class="section section-alt">
         <div class="container">
-            <div class="section-header"><h2 class="section-title"><i class="fas fa-hotel"></i>포레스트리솜 정보</h2></div>
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-hotel"></i>
+                    포레스트리솜 정보
+                </h2>
+            </div>
+
             <div class="facility-card">
                 <div class="facility-item">
-                    <div class="facility-icon"><i class="fas fa-map-marked-alt"></i></div>
-                    <div class="facility-content"><div class="facility-label">주소</div><div class="facility-value">충청북도 제천시 백운면 금봉로 365</div></div>
+                    <div class="facility-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <div class="facility-content">
+                        <div class="facility-label">주소</div>
+                        <div class="facility-value">충청북도 제천시 백운면 금봉로 365</div>
+                    </div>
                 </div>
+
                 <a href="tel:043-649-6000" class="facility-item clickable">
-                    <div class="facility-icon"><i class="fas fa-phone-square-alt"></i></div>
-                    <div class="facility-content"><div class="facility-label">대표전화</div><div class="facility-value">043-649-6000</div></div>
-                    <div class="facility-action"><i class="fas fa-phone"></i></div>
+                    <div class="facility-icon">
+                        <i class="fas fa-phone-square-alt"></i>
+                    </div>
+                    <div class="facility-content">
+                        <div class="facility-label">대표전화</div>
+                        <div class="facility-value">043-649-6000</div>
+                    </div>
+                    <div class="facility-action">
+                        <i class="fas fa-phone"></i>
+                    </div>
                 </a>
+
                 <a href="https://www.resomforest.com" target="_blank" rel="noopener noreferrer" class="facility-item clickable">
-                    <div class="facility-icon"><i class="fas fa-globe"></i></div>
-                    <div class="facility-content"><div class="facility-label">홈페이지</div><div class="facility-value">www.resomforest.com</div></div>
-                    <div class="facility-action"><i class="fas fa-external-link-alt"></i></div>
+                    <div class="facility-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="facility-content">
+                        <div class="facility-label">홈페이지</div>
+                        <div class="facility-value">www.resomforest.com</div>
+                    </div>
+                    <div class="facility-action">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
                 </a>
             </div>
         </div>
     </section>
+
+    <!-- Quick Reference Section -->
     <section class="section quick-reference">
         <div class="container">
-            <div class="section-header"><h2 class="section-title"><i class="fas fa-list-ul"></i>주요 시설 위치</h2></div>
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-list-ul"></i>
+                    주요 시설 위치
+                </h2>
+            </div>
+
             <div class="quick-grid">
-                <div class="quick-item"><div class="quick-icon seminar-bg"><i class="fas fa-presentation"></i></div><div class="quick-title">세미나실<br>(스튜디오C)</div><div class="quick-location">포레스트 리솜 3F</div></div>
-                <div class="quick-item"><div class="quick-icon dinner-bg"><i class="fas fa-utensils"></i></div><div class="quick-title">몬도키친</div><div class="quick-location">레스트리 리솜 B1층</div></div>
-                <div class="quick-item"><div class="quick-icon breakfast-bg"><i class="fas fa-coffee"></i></div><div class="quick-title">선데이브리즈</div><div class="quick-location">포레스트 리솜 2층</div></div>
-                <div class="quick-item"><div class="quick-icon parking-bg"><i class="fas fa-parking"></i></div><div class="quick-title">주차장</div><div class="quick-location">포레스트 리솜 B6 ~ B4층</div></div>
+                <div class="quick-item">
+                    <div class="quick-icon seminar-bg">
+                        <i class="fas fa-presentation"></i>
+                    </div>
+                    <div class="quick-title">세미나실<br>(스튜디오C)</div>
+                    <div class="quick-location">포레스트 리솜 3F</div>
+                </div>
+
+                <div class="quick-item">
+                    <div class="quick-icon dinner-bg">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="quick-title">몬도키친</div>
+                    <div class="quick-location">레스트리 리솜 B1층</div>
+                </div>
+
+                <div class="quick-item">
+                    <div class="quick-icon breakfast-bg">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <div class="quick-title">선데이브리즈</div>
+                    <div class="quick-location">포레스트 리솜 2층</div>
+                </div>
+
+                <div class="quick-item">
+                    <div class="quick-icon parking-bg">
+                        <i class="fas fa-parking"></i>
+                    </div>
+                    <div class="quick-title">주차장</div>
+                    <div class="quick-location">포레스트 리솜 B6 ~ B4층</div>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p class="footer-text"><i class="fas fa-info-circle"></i>본 안내는 2025 국민건강보험공단-경찰청 합동 워크숍을 위해 제작되었습니다.</p>
-            <p class="footer-copyright">© 2025 포레스트리솜. All rights reserved.</p>
+            <p class="footer-text">
+                <i class="fas fa-info-circle"></i>
+                본 안내는 2025 국민건강보험공단-경찰청 합동 워크숍을 위해 제작되었습니다.
+            </p>
+            <p class="footer-copyright">
+                © 2025 포레스트리솜. All rights reserved.
+            </p>
         </div>
     </footer>
-    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="맨 위로 이동"><i class="fas fa-chevron-up"></i></button>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="맨 위로 이동">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
     <script>
+        /**
+         * 2025 국민건강보험공단-경찰청 합동 워크숍 안내
+         * JavaScript for Interactive Features
+         */
+
         document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scroll for navigation links
             const navLinks = document.querySelectorAll('.nav-link');
+            
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
+                    
                     const targetId = this.getAttribute('href');
                     const targetSection = document.querySelector(targetId);
+                    
                     if (targetSection) {
                         const headerOffset = 60;
                         const elementPosition = targetSection.getBoundingClientRect().top;
                         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                        
                         navLinks.forEach(l => l.classList.remove('active'));
                         this.classList.add('active');
                     }
                 });
             });
+            
+            // Scroll to Top Button
             const scrollTopBtn = document.getElementById('scrollTopBtn');
+            
             window.addEventListener('scroll', function() {
-                if (window.pageYOffset > 300) { scrollTopBtn.classList.add('visible'); } else { scrollTopBtn.classList.remove('visible'); }
+                if (window.pageYOffset > 300) {
+                    scrollTopBtn.classList.add('visible');
+                } else {
+                    scrollTopBtn.classList.remove('visible');
+                }
             });
+            
             scrollTopBtn.addEventListener('click', function() {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
             });
+            
+            // Active Navigation Highlighting on Scroll
+            const sections = document.querySelectorAll('.section');
+            
+            window.addEventListener('scroll', function() {
+                let current = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (window.pageYOffset >= sectionTop - 150) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+            
+            // Add Touch Feedback
+            const interactiveElements = document.querySelectorAll('.contact-card, .facility-item.clickable, .quick-item');
+            
+            interactiveElements.forEach(element => {
+                element.addEventListener('touchstart', function() {
+                    this.style.opacity = '0.7';
+                });
+                
+                element.addEventListener('touchend', function() {
+                    this.style.opacity = '1';
+                });
+                
+                element.addEventListener('touchcancel', function() {
+                    this.style.opacity = '1';
+                });
+            });
+            
+            // Phone Links Click Tracking
+            const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+            
+            phoneLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    const originalBg = this.style.backgroundColor;
+                    this.style.backgroundColor = '#fbbf24';
+                    
+                    setTimeout(() => {
+                        this.style.backgroundColor = originalBg;
+                    }, 200);
+                });
+            });
+            
+            // Add Animation on Scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const fadeInElements = document.querySelectorAll('.timeline-item, .contact-card, .facility-item, .quick-item, .alert-box');
+            
+            const fadeInObserver = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '0';
+                        entry.target.style.transform = 'translateY(20px)';
+                        entry.target.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                        
+                        setTimeout(() => {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }, 100);
+                        
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            fadeInElements.forEach(element => {
+                fadeInObserver.observe(element);
+            });
+            
+            // Navigation Menu Sticky Behavior
+            const navMenu = document.querySelector('.nav-menu');
+            let lastScroll = 0;
+            
+            window.addEventListener('scroll', function() {
+                const currentScroll = window.pageYOffset;
+                
+                if (currentScroll > lastScroll && currentScroll > 200) {
+                    navMenu.style.transform = 'translateY(-100%)';
+                } else {
+                    navMenu.style.transform = 'translateY(0)';
+                }
+                
+                lastScroll = currentScroll;
+            });
+            
+            navMenu.style.transition = 'transform 0.3s ease';
+            
+            // Haptic Feedback
+            if ('vibrate' in navigator) {
+                const clickableElements = document.querySelectorAll('.nav-link, .contact-card, .facility-item.clickable');
+                
+                clickableElements.forEach(element => {
+                    element.addEventListener('click', function() {
+                        navigator.vibrate(10);
+                    });
+                });
+            }
+            
+            // Keyboard Navigation
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                }
+                
+                if (e.key >= '1' && e.key <= '4') {
+                    const sectionMap = {
+                        '1': '#day1',
+                        '2': '#day2',
+                        '3': '#contact',
+                        '4': '#facility'
+                    };
+                    
+                    const targetSection = document.querySelector(sectionMap[e.key]);
+                    if (targetSection) {
+                        const headerOffset = 60;
+                        const elementPosition = targetSection.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+            
+            console.log('🎉 워크숍 안내 페이지 로드 완료!');
         });
     </script>
 </body>
